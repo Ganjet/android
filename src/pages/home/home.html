@@ -1,14 +1,53 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+     Спеціально для Юри
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="col-12">
+    <div (change)="price()">
+      <div class="form-group">
+        <div class="btn btn-success btn-block">Продукт</div>
+        <select name="product" id="product" #product (change)="fan(product.value)" class="form-control">
+          <option value="louvers">louvers</option>
+          <option value="rolets">rolets</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="btn btn-success btn-block"> Модуль</div>
+        <select name="mod" id="mod" #type (change)="fan1(type.value)" class="form-control">
+          <option value="A">A</option>
+          <option value="B">B</option>
+          <option value="C">C</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="btn btn-success btn-block">Ширина</div>
+        <select name="width" id="width" #width (change)="fan2(width.value)" class="form-control">
+          <option value="120">120</option>
+          <option value="130">130</option>
+          <option value="140">140</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="btn btn-success btn-block">Висота</div>
+        <select name="heigth" id="heigth" #heigth (change)="fan3(heigth.value)" class="form-control">
+          <option value="120">120</option>
+          <option value="130">130</option>
+          <option value="140">140</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <div class="btn btn-success btn-block">Колір</div>
+        <select name="color" id="color" #color (change)="fan4(color.value)" class="form-control">
+          <option value="red">Червоний</option>
+          <option value="white">Білий</option>
+        </select>
+      </div>
+    </div>
+    <div id="price"></div>
+  </div>
 </ion-content>

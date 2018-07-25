@@ -14,19 +14,19 @@ export class HomePage {
   arr =
     [
       {
-        product: 'louvers', color: 'white', width: '120', heigth: '120', price: '30', type: 'A'
+        product: 'louvers', color: 'white', width: '120', heigth: '120', price: '1330', type: 'A'
       },
       {
-        product: 'rolets', color: 'red', width: '130', heigth: '120', price: '30', type: 'B'
+        product: 'rolets', color: 'red', width: '130', heigth: '120', price: '2230', type: 'B'
       },
       {
-        product: 'rolets', color: 'red', width: '130', heigth: '130', price: '40', type: 'C'
+        product: 'rolets', color: 'red', width: '130', heigth: '130', price: '3240', type: 'C'
       },
       {
-        product: 'rolets', color: 'red', width: '130', heigth: '140', price: '50', type: 'A'
+        product: 'rolets', color: 'red', width: '130', heigth: '140', price: '1350', type: 'A'
       },
       {
-        product: 'rolets', color: 'white', width: '130', heigth: '120', price: '30', type: 'C'
+        product: 'rolets', color: 'white', width: '130', heigth: '120', price: '230', type: 'C'
       }
     ];
   constructor(public navCtrl: NavController) {
@@ -52,10 +52,11 @@ export class HomePage {
     for (let index = 0; index < this.arr.length; index++) {
       const element = this.arr[index];
       if (element.product == this.product && element.type == this.type && element.color == this.color && element.heigth == this.heigth && element.width == this.width) {
-        document.getElementById('price').innerText = element.price
+        document.getElementById('price').innerText = (element.price + ' гривень')
         document.getElementById('price').style.display = 'block';
         break;
       } else {
+        document.getElementById('price').style.display = 'block';
         document.getElementById('price').innerText = 'Немає ціни'
       }
     }
